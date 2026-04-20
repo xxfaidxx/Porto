@@ -311,13 +311,27 @@
         >
           <!-- Card 1 -->
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="img/diagnosmart.png" alt="DiagnoSmart" class="w-full" />
+            <div class="relative overflow-hidden rounded-md shadow-md group cursor-pointer">
+              <img
+                src="img/diagnosmart.png"
+                alt="DiagnoSmart"
+                class="w-full transition-opacity duration-300 group-hover:opacity-0"
+              />
+              <iframe
+                id="video-iframe"
+                class="absolute inset-0 w-full h-full z-20 hidden group-hover:block"
+                src="https://www.youtube.com/embed/SelFC16mVFE?enablejsapi=1&autoplay=0&loop=1&playlist=SelFC16mVFE&controls=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
             <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
               DiagnoSmart
             </h3>
-            <p class="text-base font-medium text-slate-500">
+            <p class="text-base font-medium text-slate-500 text-justify">
               DiagnoSmart adalah platform diagnosis cerdas berbasis web yang
               dikembangkan sebagai proyek akhir dari Coding Camp Dicoding
               bekerja sama dengan DBS Foundation. Tujuan utama proyek ini adalah
@@ -329,12 +343,12 @@
           <!-- Card 2 -->
           <div class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
-              <img src="./img/Notes.png" alt="Notes App" class="w-full" />
+              <img src="./img/Notes.png" alt="Notes App" class="w-full hover:scale-110 transition duration-500" />
             </div>
             <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
               Notes Application
             </h3>
-            <p class="text-base font-medium text-slate-500">
+            <p class="text-base font-medium text-slate-500 text-justify">
               Proyek Notes Application adalah aplikasi web untuk mencatat dan
               mengelola kosakata dalam berbagai bahasa menggunakan metode
               flashcard. Aplikasi ini dirancang untuk membantu pengguna dalam
@@ -349,13 +363,13 @@
               <img
                 src="./img/BintangCendekia.png"
                 alt="Bintang Cendekia"
-                class="w-full"
+                class="w-full hover:scale-110 transition duration-500"
               />
             </div>
             <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
               Bintang Cendekia
             </h3>
-            <p class="text-base font-medium text-slate-500">
+            <p class="text-base font-medium text-slate-500 text-justify">
               Project Bintang Cendekia merupakan aplikasi berbasis web yang
               dirancang untuk sistem Penerimaan Peserta Didik Baru (PPDB).
               Aplikasi ini menyediakan informasi tentang sekolah, seperti nama,
