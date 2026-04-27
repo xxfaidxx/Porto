@@ -37,3 +37,25 @@ if (videoIframe && videoCard) {
     );
   });
 }
+
+// Audio Player Logic
+const musicToggle = document.querySelector("#music-toggle");
+const bgMusic = document.querySelector("#bg-music");
+const playIcon = document.querySelector("#music-icon-play");
+const pauseIcon = document.querySelector("#music-icon-pause");
+
+if (musicToggle && bgMusic) {
+  musicToggle.addEventListener("click", () => {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      playIcon.classList.add("hidden");
+      pauseIcon.classList.remove("hidden");
+      musicToggle.classList.add("animate-pulse");
+    } else {
+      bgMusic.pause();
+      playIcon.classList.remove("hidden");
+      pauseIcon.classList.add("hidden");
+      musicToggle.classList.remove("animate-pulse");
+    }
+  });
+}
