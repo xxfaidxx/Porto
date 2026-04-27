@@ -43,8 +43,15 @@ const musicToggle = document.querySelector("#music-toggle");
 const bgMusic = document.querySelector("#bg-music");
 const playIcon = document.querySelector("#music-icon-play");
 const pauseIcon = document.querySelector("#music-icon-pause");
+const volumeSlider = document.querySelector("#volume-slider");
+const volumeContainer = document.querySelector("#volume-container");
+const audioPlayer = document.querySelector("#audio-player");
 
 if (musicToggle && bgMusic) {
+  // Set default volume to 50%
+  bgMusic.volume = 0.5;
+
+  // Play/Pause toggle
   musicToggle.addEventListener("click", () => {
     if (bgMusic.paused) {
       bgMusic.play();
@@ -58,4 +65,24 @@ if (musicToggle && bgMusic) {
       musicToggle.classList.remove("animate-pulse");
     }
   });
+
+  // Volume slider control
+  if (volumeSlider) {
+    volumeSlider.addEventListener("input", (e) => {
+      bgMusic.volume = e.target.value / 100;
+    });
+  }
+
+  // Show/hide volume slider on hover
+  if (audioPlayer && volumeContainer) {
+    audioPlayer.addEventListener("mouseenter", () => {
+      volumeContainer.classList.remove("hidden");
+      volumeContainer.classList.add("flex");
+    });
+
+    audioPlayer.addEventListener("mouseleave", () => {
+      volumeContainer.classList.add("hidden");
+      volumeContainer.classList.remove("flex");
+    });
+  }
 }
